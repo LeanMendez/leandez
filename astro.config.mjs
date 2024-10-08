@@ -1,5 +1,20 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import remarkToc from "remark-toc";
+import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
+import react from "@astrojs/react";
+
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  markdown: {
+    remarkPlugins: [[remarkToc, { heading: "toc", maxDepth: 3 }]],
+  },
+  integrations: [
+    react(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+  ],
+});
