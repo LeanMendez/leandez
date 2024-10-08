@@ -1,16 +1,88 @@
 ---
-import "@/styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Linkedin from "@components/Icons/Linkedin/index.astro";
+import X from "@components/Icons/X/index.astro";
+import Github from "@components/Icons/Github/index.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Website</h1>
-  </body>
-</html>
+<BaseLayout transitions="true" title="Lean.dez | Website">
+  <article class="flex flex-col gap-4 min-h-screen h-[48rem]">
+    <h1 class="text-4xl font-extrabold mb-[1.5rem]">Lean Méndez</h1>
+    <p class="text-base font-medium">
+      Hi! I'm Leandro. I love board games, 90s music, and building things with code.
+    </p>
+    <p class="text-base font-medium">
+      Currently working at <a
+        href="https://www.supportronics.com/"
+        class="underline underline-offset-2">Supportronics</a
+      > at service of <a
+        href="https://www.mrs-electronics.com/"
+        class="underline underline-offset-2">MRS Electronic</a
+      >.
+    </p>
+    <p class="text-base font-medium">
+      My favorites board games at the moment are <a
+        class="underline underline-offset-2"
+        href="https://boardgamegeek.com/boardgame/155821/inis">INIS</a
+      > and <a
+        class="underline underline-offset-2"
+        href="https://boardgamegeek.com/boardgame/154203/imperial-settlers"
+        >Imperial Settlers</a
+      >.
+    </p>
+    <p class="text-base font-medium">
+      I’m all about finding creative ways to solve everyday problems and
+      learning new things about coding or science, no matter how useful or
+      totally random they might be!
+    </p>
+    <p>
+      Every now and then, I write some blog posts <a
+        href="/posts"
+        class="underline underline-offset-2">here</a
+      >. I like to think that are more like little reminders to my future self
+      than actual articles. Feel free to check them out here if you're curious.
+    </p>
+    <p class="text-base font-medium">
+      When I’m not coding, you’ll probably find me hanging out with friends,
+      usually with some pizza and board games involved.
+    </p>
+
+    <hr class="my-[1.75rem]" />
+    <p class="text-base font-medium">
+      Feel free to drop me a message anytime! Whether it's a question, a
+      suggestion, or just to say hi, I'm always happy to connect. You can reach
+      me on any of my social media platforms below.
+    </p>
+    <div class="flex flex-row gap-8 pt-[1.75rem]">
+      <div class="text-base font-medium">
+        <a
+          class="flex flex-row gap-1"
+          href="https://github.com/LeanMendez"
+          target="_blank"
+          rel="noopener noreferrer"><Github class="w-6 h-6" />Github</a>
+      </div>
+      <div class="text-base font-medium">
+        <a
+          class="flex flex-row gap-1"
+          href="https://www.linkedin.com/in/leandroamendez/"
+          target="_blank"
+          rel="noopener noreferrer"><Linkedin class="w-6 h-6" /> Linkedin</a>
+      </div>
+      <div class="text-base font-medium">
+        <a
+          class="flex flex-row gap-1"
+          href="https://x.com/Mr_Leomendez"
+          target="_blank"
+          rel="noopener noreferrer"><X class="w-6 h-6" />Twitter / X</a>
+      </div>
+    </div>
+    <div class="pt-[1rem]">
+      <p class="text-base font-medium">
+        Or mail me at <a
+          class="underline underline-offset-2"
+          href="mailto:leandroa.mendez@gmail">leandroa.mendez@gmail.com</a
+        >
+      </p>
+    </div>
+  </article>
+</BaseLayout>

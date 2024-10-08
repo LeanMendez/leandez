@@ -1,0 +1,28 @@
+---
+---
+
+<div
+  class="flex flex-row gap-6 text-3xl font-normal leading-6 font-sans w-full mx-auto"
+  id="submenu"
+>
+  <a href="/posts" class="submenu-link opacity-30"> Posts </a>
+  <a href="/books" class="submenu-link opacity-30"> Books </a>
+  <!-- <a href="/playlists" class="submenu-link opacity-30"> Playlists </a>
+  <a href="/goals" class="submenu-link opacity-30"> Goals </a>
+  <a href="/notes" class="submenu-link opacity-30"> Notes </a> -->
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll('.submenu-link');
+
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.remove('opacity-30');
+        //Definir estilo de link activo
+        link.classList.add('text-black' ); 
+      }
+    });
+  });
+</script>

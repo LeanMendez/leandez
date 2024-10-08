@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* inter-latin-wght-normal */
 @font-face {
   font-family: 'Inter Variable';
   font-style: normal;
@@ -11,6 +10,29 @@
   src: url(@fontsource-variable/inter/files/inter-latin-wght-normal.woff2) format('woff2-variations');
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
+
+body {
+    overflow-y: scroll;
+  }
+
+  /* Estilos para navegadores basados en WebKit */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de scroll */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo de la barra de scroll */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del scroll */
+    border-radius: 6px; /* Redondeado del scroll */
+    border: 3px solid #f1f1f1; /* Espacio entre la barra de scroll y el borde */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color del scroll cuando pasa el mouse */
+  }
 
 @layer base {
   :root {
@@ -69,11 +91,4 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
+

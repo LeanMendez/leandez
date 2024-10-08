@@ -1,0 +1,32 @@
+---
+import ArrowUp from "@components/Icons/ArrowUp/index.astro";
+import Logo from "@components/Logo/index.astro";
+import NavBar from "@components/NavBar/index.astro";
+---
+
+<header class="flex flex-row justify-between w-full px-[3.5rem] py-[2rem]">
+  <Logo />
+  <button
+    class={`fixed bottom-[2rem] right-[2rem] w-10 h-10 opacity-0 pointer-events-none hover:bg-slate-300 rounded-full transition duration-300 z-100 flex justify-center items-center`}
+    ><ArrowUp class="w-6 h-6" /></button
+  >
+  <NavBar />
+</header>
+<script>
+  window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    const button = document.querySelector("button");
+
+    if (button) {
+      button.classList.toggle("opacity-30", scroll > 250);
+      button.classList.toggle("pointer-events-auto", scroll > 250);
+      button.classList.toggle("opacity-0", scroll <= 250);
+      button.classList.toggle("pointer-events-none", scroll <= 250);
+    }
+  });
+  const button = document.querySelector("button");
+
+  button!.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>

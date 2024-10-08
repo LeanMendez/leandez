@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import SubNav from "@components/SubNav/index.astro";
+
+const posts = await getCollection("blog");
+
+// Ordenar los posts por fecha de publicación (descendente)
+const sortedPosts = posts.sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const options = {
+  month: "short",
+  day: "numeric",
+};
+
+const { post } = Astro.props;
+console.log(post)
+---
+
+<BaseLayout transitions="true" title="Lean.dez | Blog">
+  <div class="flex flex-col">
+    <SubNav />
+    <div class="flex flex-col mt-[4rem]">
+      <hr class="mb-[1rem]">
+    {
+      sortedPosts.map((post) => {
+        return (
+          <article class="flex items-center gap-4 mb-2">
+            <h3 class="text-lg font-base">
+              <a href={`/posts/${post.slug}`}>{post.data.share.title}</a>
+            </h3>
+            <time class="opacity-20 text-sm">
+              {post.data.pubDate.toLocaleString("es-ES", options)}
+            </time>
+          </article>
+        );
+      })
+    }
+    </div>
+  </div>
+</BaseLayout>

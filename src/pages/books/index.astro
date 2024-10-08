@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import SubNav from "@components/SubNav/index.astro";
+import Book from "@components/Book/index.astro";
+
+const books = await getCollection("books");
+---
+
+<BaseLayout transitions="true" title="Lean.dez | Books">
+    <div class="flex flex-col ">
+        <SubNav />
+        <div class="flex flex-col mt-[4rem]" >
+            <hr class="mb-[1rem]">
+        <h2 class="text-xl font-extrabold leading-10 mb-[1rem]">Currently Reading</h2>
+        <section class="grid grid-cols-1 md:grid-cols-2">
+        {
+            books.map((book) => {
+                return (
+                book.data.current && <Book book={book.data} />
+                );
+            })
+        }
+        </section>
+        <hr class="my-[2rem]">
+        <h2 class="text-xl font-extrabold leading-10 mb-[1rem]">Finished this year</h2>
+        <section class="grid grid-cols-1 md:grid-cols-2">
+        {
+            books.map((book) => {
+                return (
+                !book.data.current && <Book book={book.data} />
+                );
+            })
+        }
+        </section>
+        </div>
+    </div>
+</BaseLayout>

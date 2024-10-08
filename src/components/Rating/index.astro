@@ -1,0 +1,32 @@
+---
+interface Props {
+  rating: number;
+}
+
+const { rating } = Astro.props;
+
+// Calculamos las estrellas llenas, medias y vacías
+const fullStars = Math.floor(rating); // Número entero de estrellas llenas
+const halfStar = rating % 1 >= 0.5;   // Si tiene .5, mostrará una estrella a medias
+const emptyStars = 5 - fullStars - (halfStar ? 1 : 0); // Estrellas vacías
+---
+
+<div class="flex items-center space-x-1">
+  <!-- Renderizamos las estrellas llenas -->
+  {Array.from({ length: fullStars }).map(() => (
+    <div class="text-gray-500">★</div>
+  ))}
+
+  <!-- Renderizamos la estrella media si es necesario -->
+  {halfStar && (
+    <div class="relative">
+      <div class="text-gray-500 absolute top-0 left-0" style="width: 50%">★</div>
+      <div class="text-gray-300">★</div>
+    </div>
+  )}
+
+  <!-- Renderizamos las estrellas vacías -->
+  {Array.from({ length: emptyStars }).map(() => (
+    <div class="text-gray-300">★</div>
+  ))}
+</div>
