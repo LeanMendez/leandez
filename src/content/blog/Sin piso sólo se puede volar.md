@@ -1,7 +1,7 @@
 ---
 title: "Sin piso sólo se puede volar"
 pubDate: 2024-10-17
-draft: true
+draft: false
 tags: ["blog", "trabajo"]
 slug: sin-piso-solo-se-puede-volar
 share:
@@ -25,7 +25,7 @@ Agradezco haber tenido la posibilidad de trabajar junto a gente que considero mi
 
 No sé lo que me depare el futuro cercano, pero ya tengo las alas preparadas.
 
-![[Pasted image 20241017015642.png]]
+![Hinata Flying](image.png)
 
 Gracias por leer, hasta la próxima.
 
