@@ -1,7 +1,7 @@
 ---
 title: "Sin piso sólo se puede volar"
 pubDate: 2024-10-17
-draft: false
+draft: true
 tags: ["blog", "trabajo"]
 slug: sin-piso-solo-se-puede-volar
 share:
