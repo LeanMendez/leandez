@@ -14,8 +14,6 @@ Estoy intentando aprender Go, y sé que hay libros, recursos en internet, excele
 
 Si bien el proyecto que elegí es algo sumamente sencillo, quería intentar aprender del proceso haciéndolo educativo y, a la vez, obtener algo funcional como resultado. Por eso estoy intentando construir una app CLI para poder trackear las tareas que voy haciendo en el día y que me permita ver el tiempo que me lleva cada una. 
 
-![Gopher](./images/gopher.png)
-
 En sí, la aplicación es sencilla: es una CLI a la que se le puede definir un PATH donde la app creará un archivo JSON para almacenar los datos de nuestras tareas. Se pueden agregar tareas, iniciarlas, pausarlas, detenerlas, borrarlas y listarlas. Lo sé, parece un CRUD común y corriente, pero al ser una CLI, le agrega algo de mística tener que usar comandos y flags para mostrar las salidas de la app.
 
 Para desarrollarlo por el momento solo estoy usando la librería standard de Go y Cobra, que es una librería especifica para crear CLIs de forma más orgánica y que facilita la implementación de algunas funcionalidades.  
