@@ -20,8 +20,6 @@ Para desarrollarlo por el momento solo estoy usando la librería standard de Go 
 
 Estoy super conforme de lo que he logrado hasta el momento. El fin de este proyecto es poder usar la sintaxis básica de Go, poder adaptarme a la estructura de paquetes, importaciones de métodos y no asfixiarme con cosas muy complicadas. Dejemos que lo complejo sean los conceptos, no los ejercicios para practicarlos. 😁 
 
-![Tabla de tareas](./images/tabla.png)
-
 En el futuro me gustaría explorar algunas librerías como [Bubble Tea](https://github.com/charmbracelet/bubbletea) para poder mejorar la UI de la aplicación. También sería importante agregarle más flags a algunos comandos, para poder mejorar algunas de las funcionalidades que por el momento son bastante rudimentarias.
 
 Espero poder terminarla pronto, y una vez que eso pase puede que me anime a escribir un poco sobre como la hice y que cosas tuve en cuenta a la hora de desarrollarla. Si a alguien le sirve bienvenido sea, y si no, bueno al menos me sirve a mi para fijar lo que voy aprendiendo. 
