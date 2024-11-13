@@ -7,6 +7,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://leandez.netlify.app/",
   markdown: {
     remarkPlugins: [[remarkToc, { heading: "toc", maxDepth: 3 }]],
   },
