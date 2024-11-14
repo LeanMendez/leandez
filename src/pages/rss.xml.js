@@ -13,6 +13,5 @@ export async function GET(context) {
       description: post.data.description,
       pubDate: post.data.pubDate
     })),
-    customData: `<language>es</language>`,
   });
 }
